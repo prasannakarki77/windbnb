@@ -2,6 +2,7 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
+import Modal from "./components/modals/Modal";
 
 export const metadata = {
   title: "Windbnb",
@@ -21,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
-          {" "}
+          <Modal actionLabel="Submit" title="Hello World" isOpen />
           <Navbar />
         </ClientOnly>
 
